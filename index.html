@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			@import url(''https://fonts.googleapis.com/css2?family=Recursive:wght@300&display=swap'');
+			h1{
+				font-family: 'Recursive', sans-serif;
+				font-weight: bolder;
+				color: black;
+				font-size: 60px;
+				text-align: center;
+				position: static;
+			}
+			h2 {
+				margin-top: -1em;
+				font-family: 'Recursive', sans-serif;
+				color: black;
+				text-align: center;
+				position: static;
+			}
+
+			h3 {
+				font-family: 'Recursive', sans-serif;
+				font-weight: bolder;
+				color: black;
+				text-align: center;
+			}
+
+			h4 {
+				font-family: 'Recursive', sans-serif;
+				color: black;
+				text-align: center;
+			}
+
+			body {
+				background-color: #102625;
+			}
+
+			.card { 
+				background-color: #2e5755;
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,5);
+				transition: 0.3s;
+				height: 50%;
+				width: 25%;
+				position: relative;
+				left: -1px;
+			}
+
+			.card2 {
+				background-color: #2e5755;
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,5);
+				transition: 0.3s;
+				height: 50%;
+				width: 25%;
+				position: center;
+				margin: auto;
+				margin-top: -13.2em;
+			}
+
+			.container {
+				padding: 2px 16px;
+			}
+
+			a {
+				position: relative;
+				text-align: center;
+			}
+			
+			a:link, a:visited {
+				color: black;
+				text-decoration: none;
+			}
+
+
+			a:hover {
+				    color: black;
+				    text-decoration: none;
+			}
+
+			a:hover {
+				text-decoration: none;
+			}
+
+			a:active {
+				color: black;
+				text-decoration: black;
+			}
+
+		</style>
+		<title>Home Page</title>
+	</head>
+	<body>
+
+		<h1>Welcome!</h1>
+		<h2><span id="time"></h2>
+		<div class="card">
+			<div class="container">
+				<h3>Streaming Programs</h3>
+				<h4><a href="https://www.youtube.com">Youtube</a></h4>
+				<h4><a href="https://www.netflix.com">Netflix</a></h4>
+				<h4><a href="https://sdarot.tv">Sdarot</a></h4>
+			</div>
+		</div>
+		<div class="card2">
+			<div class="container">
+				<h3>Coding</h3>
+			</div>
+		</div>
+		<script>
+			// Time & Date
+			let nowTime = new Date();
+			let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+			let today = days[nowTime.getDay()];
+			let hours = ("0" + nowTime.getHours()).substr(-2);
+			let minutes = ("0" + nowTime.getMinutes()).substr(-2);
+
+			document.getElementById("time").innerHTML =
+				today + ", " + hours + ":" + minutes + ".";
+		</script>
+	</body>
+</html>
+
