@@ -9,9 +9,7 @@ function yay {
 
 sudo pacman -S feh alacritty zsh i3 i3-gaps git vim neofetch arandr xorg-xrandr picom pulseaudio pavucontrol xorg-xinit rofi firefox wget unzip ranger mpv
 
-mkdir /home/$USER/Desktop/ /home/$USER/Downloads/ /home/$USER/Documents/ /home/$USER/Pictures/ /home/$USER/.config/ 
-
-sudo cp ./vim/vimrc /etc/
+mkdir /home/$USER/Desktop/ /home/$USER/Downloads/ /home/$USER/Documents/ /home/$USER/Pictures/ /home/$USER/.config/ /home/$USER/Scripts
 
 echo -n "Enter your git username: " && read gitUsername
 echo -n "Enter your git email: " && read gitEmail
@@ -27,8 +25,13 @@ then
     clear
     exit
 else
-    cp ./i3/config /home/$USER/.config/i3/
-    cp ./i3/i3status.conf /etc/
+    sudo mkdir ~/.config/i3
+    sudo cp ./i3/config /home/$USER/.config/i3/
+    sudo cp ./i3/i3status.conf /etc/
+
+    sudo cp ./vim/vimrc /etc/
+
+    sudo cp ./picom/picom.conf /etc/xdg
 
     cp ./shell/.bashrc /home/$USER/
 
