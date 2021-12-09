@@ -41,7 +41,7 @@ else
     cp -r ./.fonts/ ~
 
     cp -r ./Backgrounds/ /home/$USER/Pictures/
-    mv /home/$USER/Pictures/Backgrounds/.fehbg ~/.config/
+    sudo cp /home/$USER/Pictures/Backgrounds/.fehbg ~/.config/
 fi
 
 echo "Installing yay (AUR helper)..."

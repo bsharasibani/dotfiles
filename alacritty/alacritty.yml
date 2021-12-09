@@ -1,8 +1,9 @@
 background_opacity: 0.8
 font:
     normal:
-        family: Recursive
-        style: Thin
+      #family: Recursive
+      family: Unifont Sample
+      style: Thin
 scrolling:
     history: 10000
 mouse:
